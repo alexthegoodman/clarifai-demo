@@ -1,0 +1,92 @@
+.button,
+.button.bp3-button:not([class*="bp3-intent-"]) {
+  background-image: none;
+  box-shadow: none;
+  border-radius: 4px;
+  background: $interactBlue;
+  width: max-content;
+  padding: 5px 0;
+  min-width: 200px;
+
+  .bp3-icon {
+    margin-right: 4px;
+
+    svg {
+    }
+  }
+  span {
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    color: #ffffff;
+    margin: 0;
+  }
+}
+
+.textButton,
+.textButton.bp3-button:not([class*="bp3-intent-"]) {
+  @extend .button;
+  background: transparent;
+
+  span {
+    color: $light-slate-blue;
+  }
+}
+
+.actionButton,
+.actionButton.bp3-button:not([class*="bp3-intent-"]) {
+  @extend .button;
+  background: $red;
+  height: 40px;
+  border-radius: 50px;
+
+  .bp3-button-text {
+    margin: 0;
+  }
+}
+
+.headerActionButton,
+.headerActionButton.bp3-button.bp3-minimal {
+  width: 50px;
+  position: relative;
+
+  &:hover {
+    background: $lightGrey;
+  }
+
+  .bp3-icon {
+    margin: 0;
+
+    svg {
+      height: 20px;
+      width: 20px;
+    }
+  }
+  .bp3-button-text {
+    position: absolute;
+    top: 15px;
+    right: 2px;
+    margin: 0;
+
+    .buttonTag,
+    .buttonTag.bp3-tag {
+      display: block;
+      text-align: center;
+      min-width: 20px;
+      height: 20px;
+      padding-left: 0;
+      padding-right: 0;
+
+      > span {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+.buttonTag,
+.buttonTag.bp3-tag {
+  margin: 0;
+}

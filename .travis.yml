@@ -1,0 +1,23 @@
+sudo: required
+
+language: node_js
+
+services:
+  - docker
+
+node_js:
+  - "11"
+
+notifications:
+  email:
+    - starinje@gmail.com
+  slack: insurance-brainstorm:QQaJALlO74yaAmlya9uOaRkz
+
+before_script:
+  - docker build -t web-application .
+
+deploy:
+  provider: script
+  script: bash deploy.sh
+  on:
+    branch: master

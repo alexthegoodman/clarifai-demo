@@ -1,0 +1,15 @@
+.mainContent {
+  padding: 0;
+  height: calc(100vh - #{$footerHeight + 1px});
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+
+  .contentBody {
+    height: auto;
+  }
+
+  @include tabletDown {
+    padding: (60px + $mobile) $mobile $mobile $mobile;
+  }
+}
