@@ -8,6 +8,10 @@ const loaders = require("./loaders");
 var ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+const dotenv = require('dotenv');
+dotenv.config();
+
+console.info("process.env.CLARIFAI_KEY", process.env.CLARIFAI_KEY);
 ////////////////////////////////////////////////////////////////////////////////
 // per-environment plugins
 const environmentPlugins = (() => {
@@ -71,6 +75,7 @@ module.exports = {
       "process.env.MIXPANEL_SECRET": JSON.stringify(process.env.MIXPANEL_SECRET),
       "process.env.SENTRY": JSON.stringify(process.env.SENTRY),
       "process.env.GTM": JSON.stringify(process.env.GTM),
+      "process.env.CLARIFAI_KEY": JSON.stringify(process.env.CLARIFAI_KEY),
     }),
 
     // Process index.html and insert script and stylesheet tags for us.
@@ -140,9 +145,9 @@ module.exports = {
 
     // new IconFontPlugin(),
 
-    ...(process.env.ANALYZE
-      ? [new (require("webpack-bundle-analyzer")).BundleAnalyzerPlugin()]
-      : []),
+    // ...(process.env.ANALYZE
+    //   ? [new (require("webpack-bundle-analyzer")).BundleAnalyzerPlugin()]
+    //   : []),
   ].concat(environmentPlugins),
 
   // node: {
@@ -152,10 +157,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "../client/public/"),
     publicPath: "/",
-    filename:
-      process.env.NODE_ENV === "development"
-        ? "client.[chunkhash].js"
-        : "client.js",
+    filename: "client.js",
+      // process.env.NODE_ENV === "development"
+      //   ? "client.[chunkhash].js"
+      //   : "client.js",
   },
 
   resolve: {

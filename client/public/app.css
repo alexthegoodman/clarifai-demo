@@ -8801,78 +8801,6 @@ main {
   flex-direction: column;
   justify-content: center; }
 
-.bp3-input:focus, .bp3-input.bp3-active {
-  box-shadow: 0 0 5px 2px #df494a; }
-
-button:focus {
-  outline: rgba(223, 73, 74, 0.6) auto 2px; }
-
-.bp3-form-group .bp3-label {
-  font-size: 1.1rem;
-  color: white; }
-  .bp3-form-group .bp3-label span {
-    font-size: 0.9rem; }
-
-.bp3-form-group .bp3-form-content input[type="text"],
-.bp3-form-group .bp3-form-content input[type="email"],
-.bp3-form-group .bp3-form-content input[type="password"],
-.bp3-form-group .bp3-form-content input[type="number"] {
-  font-size: 14px;
-  height: 32px;
-  padding: 5px 12px; }
-
-.bp3-html-select .bp3-icon,
-.bp3-select .bp3-icon {
-  margin: 0; }
-
-.bp3-file-upload-input {
-  margin: 0; }
-
-textarea.bp3-input, textarea.bp3-input.bp3-large, textarea.bp3-input.bp3-small {
-  width: 100%; }
-
-.floatingForm {
-  width: 500px;
-  margin: 50px auto;
-  padding: 50px 35px; }
-  .floatingForm h1.headline,
-  .floatingForm h2.headline,
-  .floatingForm h3.headline,
-  .floatingForm h4.headline,
-  .floatingForm h5.headline,
-  .floatingForm h6.headline {
-    margin: 0;
-    color: white; }
-  .floatingForm button,
-  .floatingForm button.bp3-button:not([class*="bp3-intent-"]) {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center; }
-  .floatingForm form {
-    display: flex;
-    flex-direction: column; }
-  .floatingForm.noMargin {
-    margin: 0;
-    width: 100%; }
-  .floatingForm.whiteForm h1,
-  .floatingForm.whiteForm h2,
-  .floatingForm.whiteForm h3,
-  .floatingForm.whiteForm h4,
-  .floatingForm.whiteForm h5,
-  .floatingForm.whiteForm h6,
-  .floatingForm.whiteForm p {
-    margin: 0;
-    color: white !important; }
-  .floatingForm.whiteForm label {
-    color: white !important; }
-  .floatingForm.whiteForm .bp3-tab {
-    color: white !important; }
-  @media only screen and (max-width: 767px) {
-    .floatingForm {
-      width: 100%;
-      padding: 30px 20px;
-      margin: 35px auto; } }
-
 .ic, .ic2 {
   speak: none;
   font-style: normal;
@@ -9047,63 +8975,6 @@ textarea.bp3-input, textarea.bp3-input.bp3-large, textarea.bp3-input.bp3-small {
   font-family: "Roboto", sans-serif;
   word-wrap: break-word; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-span {
-  padding: 0;
-  margin: 0;
-  color: white; }
-
-.headline {
-  font-size: 3rem; }
-  @media only screen and (max-width: 767px) {
-    .headline {
-      font-size: 2rem; } }
-
-.darkHeadline {
-  color: #182026 !important; }
-
-.textCenter {
-  display: block;
-  text-align: center; }
-
-ul,
-ol {
-  padding: 0;
-  list-style: none; }
-  ul li,
-  ol li {
-    margin-bottom: 7px; }
-    ul li:last-of-type,
-    ol li:last-of-type {
-      margin-bottom: 0px; }
-
-a:hover, a:active, a:focus, a:visited, a {
-  font-size: inherit;
-  font-weight: inherit;
-  font-style: inherit;
-  font-stretch: inherit;
-  line-height: inherit;
-  color: inherit;
-  border-bottom: 2px white solid;
-  width: max-content; }
-  a:hover .bp3-icon svg, a:active .bp3-icon svg, a:focus .bp3-icon svg, a:visited .bp3-icon svg, a .bp3-icon svg {
-    fill: white;
-    width: 12px;
-    height: 12px;
-    position: relative;
-    top: -2px;
-    margin-right: 3px; }
-
-a.note, p.note {
-  font-size: 15px;
-  color: white;
-  letter-spacing: 0.33px; }
-
 .bp3-overlay.bp3-overlay-scroll-container {
   z-index: 200; }
 
@@ -9225,96 +9096,6 @@ a.note, p.note {
   .thirdsCard:nth-of-type(3n) {
     margin-right: 0; }
 
-.button, .floatingForm button,
-.floatingForm button.bp3-button:not([class*="bp3-intent-"]), .textButton,
-.textButton.bp3-button:not([class*="bp3-intent-"]), .actionButton,
-.actionButton.bp3-button:not([class*="bp3-intent-"]),
-.button.bp3-button:not([class*="bp3-intent-"]),
-.floatingForm button.bp3-button:not([class*="bp3-intent-"]),
-.bp3-button.textButton:not([class*="bp3-intent-"]),
-.bp3-button.actionButton:not([class*="bp3-intent-"]) {
-  background-image: none;
-  box-shadow: none;
-  border-radius: 4px;
-  background: #1585ff;
-  width: max-content;
-  padding: 5px 0;
-  min-width: 200px; }
-  .button .bp3-icon, .floatingForm button .bp3-icon, .floatingForm button.bp3-button:not([class*="bp3-intent-"]) .bp3-icon, .textButton .bp3-icon, .textButton.bp3-button:not([class*="bp3-intent-"]) .bp3-icon, .actionButton .bp3-icon, .actionButton.bp3-button:not([class*="bp3-intent-"]) .bp3-icon,
-  .button.bp3-button:not([class*="bp3-intent-"]) .bp3-icon,
-  .floatingForm button.bp3-button:not([class*="bp3-intent-"]) .bp3-icon,
-  .bp3-button.textButton:not([class*="bp3-intent-"]) .bp3-icon,
-  .bp3-button.actionButton:not([class*="bp3-intent-"]) .bp3-icon {
-    margin-right: 4px; }
-  .button span, .floatingForm button span, .floatingForm button.bp3-button:not([class*="bp3-intent-"]) span, .textButton span, .textButton.bp3-button:not([class*="bp3-intent-"]) span, .actionButton span, .actionButton.bp3-button:not([class*="bp3-intent-"]) span,
-  .button.bp3-button:not([class*="bp3-intent-"]) span,
-  .floatingForm button.bp3-button:not([class*="bp3-intent-"]) span,
-  .bp3-button.textButton:not([class*="bp3-intent-"]) span,
-  .bp3-button.actionButton:not([class*="bp3-intent-"]) span {
-    font-size: 14px;
-    font-weight: 300;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    color: #ffffff;
-    margin: 0; }
-
-.textButton,
-.textButton.bp3-button:not([class*="bp3-intent-"]) {
-  background: transparent; }
-  .textButton span,
-  .textButton.bp3-button:not([class*="bp3-intent-"]) span {
-    color: rgba(36, 52, 101, 0.5); }
-
-.actionButton,
-.actionButton.bp3-button:not([class*="bp3-intent-"]) {
-  background: #df494a;
-  height: 40px;
-  border-radius: 50px; }
-  .actionButton .bp3-button-text,
-  .actionButton.bp3-button:not([class*="bp3-intent-"]) .bp3-button-text {
-    margin: 0; }
-
-.headerActionButton,
-.headerActionButton.bp3-button.bp3-minimal {
-  width: 50px;
-  position: relative; }
-  .headerActionButton:hover,
-  .headerActionButton.bp3-button.bp3-minimal:hover {
-    background: #f7f7f7; }
-  .headerActionButton .bp3-icon,
-  .headerActionButton.bp3-button.bp3-minimal .bp3-icon {
-    margin: 0; }
-    .headerActionButton .bp3-icon svg,
-    .headerActionButton.bp3-button.bp3-minimal .bp3-icon svg {
-      height: 20px;
-      width: 20px; }
-  .headerActionButton .bp3-button-text,
-  .headerActionButton.bp3-button.bp3-minimal .bp3-button-text {
-    position: absolute;
-    top: 15px;
-    right: 2px;
-    margin: 0; }
-    .headerActionButton .bp3-button-text .buttonTag,
-    .headerActionButton .bp3-button-text .buttonTag.bp3-tag,
-    .headerActionButton.bp3-button.bp3-minimal .bp3-button-text .buttonTag,
-    .headerActionButton.bp3-button.bp3-minimal .bp3-button-text .buttonTag.bp3-tag {
-      display: block;
-      text-align: center;
-      min-width: 20px;
-      height: 20px;
-      padding-left: 0;
-      padding-right: 0; }
-      .headerActionButton .bp3-button-text .buttonTag > span,
-      .headerActionButton .bp3-button-text .buttonTag.bp3-tag > span,
-      .headerActionButton.bp3-button.bp3-minimal .bp3-button-text .buttonTag > span,
-      .headerActionButton.bp3-button.bp3-minimal .bp3-button-text .buttonTag.bp3-tag > span {
-        font-size: 0.7rem; }
-
-.buttonTag,
-.buttonTag.bp3-tag {
-  margin: 0; }
-
 h1 {
   font-size: 48px; }
 
@@ -9329,6 +9110,9 @@ h1 {
   @media only screen and (max-width: 767px) {
     .mainContent {
       padding: 80px 20px 20px 20px; } }
+
+.displayImage {
+  display: block; }
 
 .menuItem,
 .menuItem.bp3-menu-item {
@@ -9402,4 +9186,7 @@ h1 {
 .logo {
   display: block;
   max-width: 100%; }
+
+.predictBox {
+  position: relative; }
 

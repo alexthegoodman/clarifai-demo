@@ -3,6 +3,9 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 module.exports = {
   typescript: {
     test: /\.(tsx?|jsx?)/,

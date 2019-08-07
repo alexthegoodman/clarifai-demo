@@ -42,11 +42,21 @@ const UploadField: React.FC<UploadFieldProps> = ({
               // form.setFieldValue(fieldName, files);
               const file = event.target["files"][0];
               const reader = new FileReader();
+              console.info(file)
               form.setFieldValue(fieldName, file.name);
               form.setFieldValue(fieldName + "Size", file.size);
               form.setFieldValue(fieldName + "Type", file.type);
+              
               reader.onload = function(item) {
                 form.setFieldValue(fieldName + "Data", item.target["result"]);
+                
+                var img = new Image();
+                img.onload = function() {
+                  form.setFieldValue(fieldName + "Width", this.width);
+                  form.setFieldValue(fieldName + "Height", this.height);
+                }
+                img.src = item.target["result"];
+  
               };
 
               reader.readAsDataURL(file);
