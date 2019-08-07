@@ -9140,6 +9140,9 @@ h1 {
 .displayImage {
   display: block; }
 
+.info {
+  margin: 50px 0 0 0; }
+
 .menuItem,
 .menuItem.bp3-menu-item {
   padding: 11px 30px;

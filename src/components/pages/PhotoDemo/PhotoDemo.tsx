@@ -84,6 +84,8 @@ const PhotoDemo: React.FC<PhotoDemoProps> = () => {
           );
         }}
       />
+      <Text className="info" tagName="p">Based on <a target="_blank" href="http://developer-dev.clarifai.com/developer/guide/predict#predict">Clarifai Predict API</a></Text>
+      <Text tagName="p">For more see <a target="_blank" href="https://alexthegoodman.com">AlexTheGoodman.com</a></Text>
     </div>
   ); 
 };
