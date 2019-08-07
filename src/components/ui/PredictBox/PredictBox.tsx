@@ -11,13 +11,12 @@ const PredictBox: React.FC<PredictBoxProps> = ({
   imageHeight = 0,
   imageWidth = 0
 }) => {
-  console.info(boundingBoxes, imageHeight, imageWidth)
   return (
     boundingBoxes ? 
     <div className="predictBox">
       {boundingBoxes.map((data, i) => {
         const box = data.region_info.bounding_box;
-        console.info(box);
+        // bounding box is decimal percentages
         return <div key={i} style={{ 
           border: "2px red solid", 
           position: "absolute", 

@@ -9,10 +9,13 @@ import * as Yup from "yup";
 import PredictBox from "../../ui/PredictBox/PredictBox";
 
 const PhotoDemo: React.FC<PhotoDemoProps> = () => {
+  // services
   const clarifaiClient = new ClarifaiClient();
 
+  // hooks / state
   const [boundingBoxes, setBoundingBoxes] = React.useState(null);
 
+  // form validation
   const PhotoDemoSchema = Yup.object().shape({
     faces: Yup.string()
       .required("Required"),
@@ -42,7 +45,8 @@ const PhotoDemo: React.FC<PhotoDemoProps> = () => {
         ) => {
           console.log("values", { values, actions });
 
-          // mixpanel.track("Log in form submission attempt", {
+          // analytics call optional
+          // mixpanel.track("Predict form submission attempt", {
           //   env: process.env.NODE_ENV,
           //   time: new Date(),
           //   data: {
@@ -50,6 +54,7 @@ const PhotoDemo: React.FC<PhotoDemoProps> = () => {
           //   },
           // });
 
+          // Predict API interaction
           const dataBoundingBoxes = await clarifaiClient.getFaceBoundingBox(values["facesData"]);
           setBoundingBoxes(dataBoundingBoxes);
           actions.setSubmitting(false);

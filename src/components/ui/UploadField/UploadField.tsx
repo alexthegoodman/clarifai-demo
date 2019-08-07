@@ -41,9 +41,11 @@ const UploadField: React.FC<UploadFieldProps> = ({
               // const files = event.target["files"][0];
               // console.info("file", event, files);
               // form.setFieldValue(fieldName, files);
+
+              // set all image related vars in Formik
+              // size, type, dimenstions, and base64 data
               const file = event.target["files"][0];
               const reader = new FileReader();
-              console.info(file)
               form.setFieldValue(fieldName, file.name);
               form.setFieldValue(fieldName + "Size", file.size);
               form.setFieldValue(fieldName + "Type", file.type);
@@ -53,8 +55,8 @@ const UploadField: React.FC<UploadFieldProps> = ({
                 
                 var img = new Image();
                 img.onload = function() {
-                  form.setFieldValue(fieldName + "Width", this.width);
-                  form.setFieldValue(fieldName + "Height", this.height);
+                  form.setFieldValue(fieldName + "Width", this['width']);
+                  form.setFieldValue(fieldName + "Height", this['height']);
                 }
                 img.src = item.target["result"];
   
@@ -62,6 +64,7 @@ const UploadField: React.FC<UploadFieldProps> = ({
 
               reader.readAsDataURL(file);
 
+              // callback
               onChange(event);
             }}
           />
