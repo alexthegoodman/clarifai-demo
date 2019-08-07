@@ -1,3 +1,5 @@
+import { ChangeEvent, FormEvent } from "react";
+
 export interface UploadFieldProps {
   ref?: React.Ref<any>;
   className?: string;
@@ -6,4 +8,5 @@ export interface UploadFieldProps {
   label?: string;
   fieldName: string;
   fieldInfo?: string;
+  onChange: (e: FormEvent<any>) => void;
 }

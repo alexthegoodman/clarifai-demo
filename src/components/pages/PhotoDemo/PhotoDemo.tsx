@@ -19,8 +19,8 @@ const PhotoDemo: React.FC<PhotoDemoProps> = () => {
   });
 
   return (
-    <>
-    <Text tagName="h1" className="headline">
+    <div className="centerContain">
+      <Text tagName="h1" className="headline">
         Photo Demo
       </Text>
       <Text tagName="p">Only 1 image at a time.</Text>
@@ -52,12 +52,27 @@ const PhotoDemo: React.FC<PhotoDemoProps> = () => {
 
           const dataBoundingBoxes = await clarifaiClient.getFaceBoundingBox(values["facesData"]);
           setBoundingBoxes(dataBoundingBoxes);
+          actions.setSubmitting(false);
         }}
         render={(formikBag: FormikProps<PhotoDemoValues>) => {
           return (
             <Form>
-              <UploadField label="Upload Faces" fieldName="faces" />
-              <img className="displayImage" src={formikBag.values["facesData"]} />
+              <UploadField label="Upload Faces" fieldName="faces" onChange={() => setBoundingBoxes(null)} />
+              <div className="previews">
+                <div className="left">
+                  <img className="displayImage" src={formikBag.values["facesData"]} />
+                </div>
+                {boundingBoxes ? 
+                  <div className="right">
+                    <PredictBox 
+                      boundingBoxes={boundingBoxes} 
+                      formikBag={formikBag} 
+                      imageWidth={formikBag.values["facesWidth"]} 
+                      imageHeight={formikBag.values["facesHeight"]} 
+                    /> 
+                  </div>
+                  : <></>}
+              </div>
               <Button
                 type="submit"
                 disabled={formikBag.isSubmitting}
@@ -65,13 +80,11 @@ const PhotoDemo: React.FC<PhotoDemoProps> = () => {
               >
                 Predict
               </Button>
-              <Text tagName="p">Face Bounding Box:</Text>
-              <PredictBox boundingBoxes={boundingBoxes} formikBag={formikBag} imageWidth={formikBag.values["facesWidth"]} imageHeight={formikBag.values["facesHeight"]} /> 
             </Form>
           );
         }}
       />
-    </>
+    </div>
   ); 
 };
 

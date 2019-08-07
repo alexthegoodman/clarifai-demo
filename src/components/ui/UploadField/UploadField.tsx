@@ -13,6 +13,7 @@ const UploadField: React.FC<UploadFieldProps> = ({
   label = "",
   fieldName = "",
   fieldInfo = "(required)",
+  onChange = () => {}
 }) => {
   // const clickHandler = e => onClick(e);
   return (
@@ -60,6 +61,8 @@ const UploadField: React.FC<UploadFieldProps> = ({
               };
 
               reader.readAsDataURL(file);
+
+              onChange(event);
             }}
           />
           <Text tagName="p">

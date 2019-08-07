@@ -21,10 +21,10 @@ const PredictBox: React.FC<PredictBoxProps> = ({
         return <div key={i} style={{ 
           border: "2px red solid", 
           position: "absolute", 
-          top: box.top_row * imageHeight,
-          left: box.left_col * imageWidth,
-          width: imageWidth - (box.right_col * imageWidth),
-          height: imageHeight - (box.bottom_row * imageHeight)
+          top: (box.top_row * 100) + "%",
+          left: (box.left_col * 100) + "%",
+          width: ((box.right_col - box.left_col) * 100) + "%",
+          height: ((box.bottom_row - box.top_row) * 100) + "%"
          }}></div>
       })}
       <img className="displayImage" src={formikBag.values["facesData"]} />

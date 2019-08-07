@@ -1,3 +1,41 @@
+.centerContain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    form {
+        button {
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}
+
+.previews {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 50px 0;
+
+    .left, .right {
+        box-shadow: $bigShadow;
+        border-radius: 5px;
+        overflow: hidden;
+        border: 5px white solid;
+        
+        img {
+            display: block;
+            max-width: 600px;
+        }
+    }
+
+    .left {
+        margin: 0 100px 0 0;
+    }
+}
+
 .displayImage {
     display: block;
 }

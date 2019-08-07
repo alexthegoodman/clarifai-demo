@@ -9111,6 +9111,32 @@ h1 {
     .mainContent {
       padding: 80px 20px 20px 20px; } }
 
+.centerContain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .centerContain form button {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    text-align: center; }
+
+.previews {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 50px 0; }
+  .previews .left, .previews .right {
+    box-shadow: 0 25px 50px 5px rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+    overflow: hidden;
+    border: 5px white solid; }
+    .previews .left img, .previews .right img {
+      display: block;
+      max-width: 600px; }
+  .previews .left {
+    margin: 0 100px 0 0; }
+
 .displayImage {
   display: block; }
 
